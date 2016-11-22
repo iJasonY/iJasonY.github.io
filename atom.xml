@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://ijason.cn/"/>
-  <updated>2016-07-14T12:27:30.000Z</updated>
-  <id>http://ijason.cn/</id>
+  <link href="http://ijason.me/"/>
+  <updated>2016-11-22T15:09:42.000Z</updated>
+  <id>http://ijason.me/</id>
   
   <author>
     <name>時之繁花_JasonY</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>加密算法简介</title>
-    <link href="http://ijason.cn/2016/07/14/jia-mi-suan-fa-jian-jie/"/>
-    <id>http://ijason.cn/2016/07/14/jia-mi-suan-fa-jian-jie/</id>
+    <link href="http://ijason.me/p/c47aa1c0/"/>
+    <id>http://ijason.me/p/c47aa1c0/</id>
     <published>2016-07-14T11:55:55.000Z</published>
-    <updated>2016-07-14T12:27:30.000Z</updated>
+    <updated>2016-11-22T15:09:42.000Z</updated>
     
     <content type="html">&lt;h4 id=&quot;简单的概念&quot;&gt;&lt;a href=&quot;#简单的概念&quot; class=&quot;headerlink&quot; title=&quot;简单的概念&quot;&gt;&lt;/a&gt;简单的概念&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;明文：加密前的信息&lt;/li&gt;
@@ -71,19 +71,19 @@
     
     </summary>
     
-      <category term="随记" scheme="http://ijason.cn/categories/%E9%9A%8F%E8%AE%B0/"/>
+      <category term="随记" scheme="http://ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
     
     
-      <category term="密码技术" scheme="http://ijason.cn/tags/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/"/>
+      <category term="密码技术" scheme="http://ijason.me/tags/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>我想念你的多种方式</title>
-    <link href="http://ijason.cn/2016/07/11/wo-xiang-nian-ni-de-duo-zhong-fang-shi/"/>
-    <id>http://ijason.cn/2016/07/11/wo-xiang-nian-ni-de-duo-zhong-fang-shi/</id>
+    <link href="http://ijason.me/p/b25ac606/"/>
+    <id>http://ijason.me/p/b25ac606/</id>
     <published>2016-07-11T12:02:26.000Z</published>
-    <updated>2016-07-11T12:21:04.000Z</updated>
+    <updated>2016-11-22T15:09:42.000Z</updated>
     
     <content type="html">&lt;p&gt;　　比如，我改变一种习惯，从前我不吃胡萝卜，现在我开始吃胡萝卜，这样每次我吃胡萝卜的时候，都想到你；&lt;/p&gt;
 &lt;p&gt;　　比如，从现在开始，一年之内，我搭乘公车，都提前一站下来，走路到目的地，这样我可以慢下来，看看周围的人和树，还有店铺，它们沉默不语，我也是，因为我想到了你；&lt;br&gt;　　&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;　　比如，有一个词我永远都不用，每次要用到的时候，我很小心，绕开它，换过一个词，这样我又想到你一次；&lt;/p&gt;
@@ -114,19 +114,19 @@
     
     </summary>
     
-      <category term="随记" scheme="http://ijason.cn/categories/%E9%9A%8F%E8%AE%B0/"/>
+      <category term="随记" scheme="http://ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
     
     
-      <category term="文摘" scheme="http://ijason.cn/tags/%E6%96%87%E6%91%98/"/>
+      <category term="文摘" scheme="http://ijason.me/tags/%E6%96%87%E6%91%98/"/>
     
   </entry>
   
   <entry>
     <title>CocoaPods版本升级</title>
-    <link href="http://ijason.cn/2016/07/05/CocoaPods-ban-ben-sheng-ji/"/>
-    <id>http://ijason.cn/2016/07/05/CocoaPods-ban-ben-sheng-ji/</id>
+    <link href="http://ijason.me/p/dd2b6a6/"/>
+    <id>http://ijason.me/p/dd2b6a6/</id>
     <published>2016-07-05T13:25:28.000Z</published>
-    <updated>2016-07-05T15:15:24.000Z</updated>
+    <updated>2016-11-22T15:09:42.000Z</updated>
     
     <content type="html">&lt;p&gt;今天和往常一样打开一个包含&lt;a href=&quot;https://cocoapods.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CocoaPods&lt;/a&gt;类库的项目  &lt;/p&gt;
 &lt;h4 id=&quot;命令行执行&quot;&gt;&lt;a href=&quot;#命令行执行&quot; class=&quot;headerlink&quot; title=&quot;命令行执行&quot;&gt;&lt;/a&gt;命令行执行&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod install --verbose --no-repo-update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[!] The &amp;apos;master&amp;apos; repo requires CocoaPods 0.39.0 -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -148,19 +148,19 @@
     
     </summary>
     
-      <category term="随记" scheme="http://ijason.cn/categories/%E9%9A%8F%E8%AE%B0/"/>
+      <category term="随记" scheme="http://ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
     
     
-      <category term="iOS" scheme="http://ijason.cn/tags/iOS/"/>
+      <category term="iOS" scheme="http://ijason.me/tags/iOS/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://ijason.cn/2016/06/07/hello-world/"/>
-    <id>http://ijason.cn/2016/06/07/hello-world/</id>
+    <link href="http://ijason.me/p/4a17b156/"/>
+    <id>http://ijason.me/p/4a17b156/</id>
     <published>2016-06-07T14:29:34.000Z</published>
-    <updated>2016-06-21T16:22:07.000Z</updated>
+    <updated>2016-11-22T15:09:42.000Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt; &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

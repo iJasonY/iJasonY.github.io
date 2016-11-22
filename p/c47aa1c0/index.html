@@ -6,31 +6,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="時之繁花_JasonY的博客">
-    <title>Hello World - 時之繁花_JasonY的博客</title>
+    <title>加密算法简介 - 時之繁花_JasonY的博客</title>
     <meta name="author" content="時之繁花_JasonY">
     
     
-        <link rel="icon" href="http://ijason.cn/assets/images/favicon.ico">
+        <link rel="icon" href="http://ijason.me/assets/images/favicon.ico">
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+    <meta name="description" content="简单的概念
+明文：加密前的信息
+密文：加密后的信息
+加密算法：加密或解密的算法
+密钥：算法使用的钥匙
+
+简单的例子eg: 将123456每位数字都加1后得到234567">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://ijason.cn/2016/06/07/hello-world/index.html">
+<meta property="og:title" content="加密算法简介">
+<meta property="og:url" content="http://ijason.me/p/c47aa1c0/index.html">
 <meta property="og:site_name" content="時之繁花_JasonY的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2016-06-21T16:22:07.000Z">
+<meta property="og:description" content="简单的概念
+明文：加密前的信息
+密文：加密后的信息
+加密算法：加密或解密的算法
+密钥：算法使用的钥匙
+
+简单的例子eg: 将123456每位数字都加1后得到234567">
+<meta property="og:updated_time" content="2016-11-22T15:09:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="加密算法简介">
+<meta name="twitter:description" content="简单的概念
+明文：加密前的信息
+密文：加密后的信息
+加密算法：加密或解密的算法
+密钥：算法使用的钥匙
+
+简单的例子eg: 将123456每位数字都加1后得到234567">
     
     
         
     
     
-        <meta property="og:image" content="http://ijason.cn/assets/images/avatar.png"/>
+        <meta property="og:image" content="http://ijason.me/assets/images/avatar.png"/>
     
     
     
@@ -216,15 +234,21 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Hello World
+            加密算法简介
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" datetime="2016-06-07T22:29:34+08:00">
+    <time itemprop="datePublished" datetime="2016-07-14T19:55:55+08:00">
 	
-		    6月 07, 2016
+		    7月 14, 2016
     	
     </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/随记/">随记</a>
+
+
     
 </div>
 
@@ -232,27 +256,59 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br> <a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h4 id="简单的概念"><a href="#简单的概念" class="headerlink" title="简单的概念"></a>简单的概念</h4><ul>
+<li>明文：加密前的信息</li>
+<li>密文：加密后的信息</li>
+<li>加密算法：加密或解密的算法</li>
+<li>密钥：算法使用的钥匙</li>
+</ul>
+<h4 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h4><pre><code>eg: 将123456每位数字都加1后得到234567 
+</code></pre> <a id="more"></a>    
+<p>  在这个例子中：</p>
+<ul>
+<li><p>明文是：123456</p>
+</li>
+<li><p>密文是：234567</p>
+</li>
+<li><p>加密密钥是：1</p>
+</li>
+<li><p>加密算法是：每位加</p>
+</li>
+</ul>
+<h4 id="加密算法种类"><a href="#加密算法种类" class="headerlink" title="加密算法种类"></a>加密算法种类</h4><p>  按照加密的方式我们可以将加密算法大体分成一下三种：</p>
+<ul>
+<li>对称加密算法（加密和解密算法是对称的可能有点抽象你可以理解成同一把钥匙）</li>
+<li>非对称加密算法（加密和解密算法是非对称的可以理解成加密的时候是一把钥匙解密的时候是一把钥匙，典型的就是rsa公钥和私钥）</li>
+<li>经典哈希算法（哈希算法是一种散列算法，有个特殊性是它是不可逆只能通过穷举法超大量的计算才可能算出，一般几率很小，还有就是你同一段的明文两次加密出来的结果是不一样的）</li>
+</ul>
+<h4 id="算法举例"><a href="#算法举例" class="headerlink" title="算法举例"></a>算法举例</h4><ul>
+<li>对称加密算法：DES算法，3DES算法，TDEA算法，Blowfish算法，RC5算法，IDEA算法，AES算法。</li>
+<li>非对称加密算法：RSA、Elgamal、背包算法、Rabin、D-H、ECC。</li>
+<li>经典的哈希算法：MD2、MD4、MD5 和 SHA-1（目的是将任意长输入通过算法变为固定长输出，且保证输入变化一点输出都不同，且不能反向解密）</li>
+</ul>
+<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>  非对称加密算法可能是世界上最重要的算法，它是当今电子商务等领域的基石。</p>
+<p>  简而言之，非对称加密就是指加密公钥和解密密钥是不同的，而且加密公钥和解密密钥是成对出现。非对称加密又叫公钥加密，也就是说成对的密钥，其中一个是对外公开的，所有人都可以获得，人们称之为公钥；而与之相对应的称之为私钥，只有这对密钥的生成者才能拥有。</p>
+<p>  对于一个私钥，有且只有一个与之对应的公钥。公钥公开给任何人，私钥通常是只有生成者拥有。公/私钥通常是1024位或者2048位，越长安全系数越高，但是解密越困难。尽管拿到了公钥，如果没有私钥，要想解密那几乎是不可能的，至少现在在世界上还没有人公开出来说成功解密的。</p>
+<p>  关于公钥和私钥总结一句话：公钥和密钥成对出现，其中公钥负责加密 ，私钥负责解密</p>
 
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/密码技术/">密码技术</a>
+
+            </div>
+        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/05/CocoaPods-ban-ben-sheng-ji/"  data-tooltip="CocoaPods版本升级">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -260,7 +316,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/p/b25ac606/" data-tooltip="我想念你的多种方式">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -275,17 +331,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -327,7 +383,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/07/05/CocoaPods-ban-ben-sheng-ji/"  data-tooltip="CocoaPods版本升级">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -335,7 +391,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/p/b25ac606/" data-tooltip="我想念你的多种方式">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -350,17 +406,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -380,17 +436,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="3">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-google-plus"></i><span class="">分享到 Google+</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.cn/2016/06/07/hello-world/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://ijason.me/p/c47aa1c0/">
                 <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
             </a>
         </li>
