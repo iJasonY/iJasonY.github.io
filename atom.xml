@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ijason.me/"/>
-  <updated>2016-11-22T15:09:42.000Z</updated>
+  <updated>2016-11-28T10:23:51.000Z</updated>
   <id>http://ijason.me/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在Ubuntu 14.04下安装Node.js</title>
+    <link href="http://ijason.me/p/c918e033/"/>
+    <id>http://ijason.me/p/c918e033/</id>
+    <published>2016-11-28T10:23:20.000Z</published>
+    <updated>2016-11-28T10:23:51.000Z</updated>
+    
+    <content type="html">&lt;p&gt;昨天在自己的VPS上面捣鼓东西，却不小心把先前已经装好的Node环境给…给…搞坏了（ps:别问我是怎么搞玩坏的，因为我也想知道😂 ）那么问题来了，搞坏了肿么办。。。(画外音:笨啊，重装呀，重装不会吗？) &lt;/p&gt;
+&lt;p&gt;对吼，重装，自己作的妖，跪着也要把它弄好（膝盖君: 我招谁惹谁了😭 ），于是乎拿起键盘就是 敲 ~&lt;/p&gt;
+&lt;h3 id=&quot;先安装下依赖&quot;&gt;&lt;a href=&quot;#先安装下依赖&quot; class=&quot;headerlink&quot; title=&quot;先安装下依赖&quot;&gt;&lt;/a&gt;先安装下依赖&lt;/h3&gt;&lt;p&gt;要在绝大多数*nix系的系统中编译Node.js,只要确保系统中有C/C++编译器以及OpenSSL库就可以了，如果没有安装起来也是比较容易的，在Ubuntu下只需执行以下命令就可以很方便的安装&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install g++ libssl-dev apache2-utils curl&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;然后下载Node-js源码到本地并解压缩&quot;&gt;&lt;a href=&quot;#然后下载Node-js源码到本地并解压缩&quot; class=&quot;headerlink&quot; title=&quot;然后下载Node.js源码到本地并解压缩&quot;&gt;&lt;/a&gt;然后下载Node.js源码到本地并解压缩&lt;/h3&gt;&lt;p&gt;ok 安装完依赖接下来我们再下载安装Node.js 源码包 (ps: 我这里安装的是V0.10.24版,大家可以自己选择所需的版本)&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -O http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar -xzvf node-v0.10.24.tar.gz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;进入到解压缩的目录进行编译和安装&quot;&gt;&lt;a href=&quot;#进入到解压缩的目录进行编译和安装&quot; class=&quot;headerlink&quot; title=&quot;进入到解压缩的目录进行编译和安装&quot;&gt;&lt;/a&gt;进入到解压缩的目录进行编译和安装&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd node-v0.10.24 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./configure&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make test &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;make install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;最后再确保下安装是否成功&quot;&gt;&lt;a href=&quot;#最后再确保下安装是否成功&quot; class=&quot;headerlink&quot; title=&quot;最后再确保下安装是否成功&quot;&gt;&lt;/a&gt;最后再确保下安装是否成功&lt;/h3&gt;&lt;p&gt;在系统终端下输入并执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;node -v&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果安装成功的话就会显示当前安装的Node.js的版本号&lt;/p&gt;
+&lt;p&gt;OK, 打完收工！！！（膝盖君: 谢天谢地，终于好了😒 ）&lt;/p&gt;
+&lt;p&gt;怎么样是不是挺简单的哈&lt;/p&gt;
+&lt;h3 id=&quot;后记&quot;&gt;&lt;a href=&quot;#后记&quot; class=&quot;headerlink&quot; title=&quot;后记&quot;&gt;&lt;/a&gt;后记&lt;/h3&gt;&lt;p&gt;据说还有个更方便的安装方式，就是用apt-get命令安装，不过我没实际操作过，大家可以试下，具体命令如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install nodejs&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo apt-get install npm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天在自己的VPS上面捣鼓东西，却不小心把先前已经装好的Node环境给…给…搞坏了（ps:别问我是怎么搞玩坏的，因为我也想知道😂 ）那么问题来了，搞坏了肿么办。。。(画外音:笨啊，重装呀，重装不会吗？) &lt;/p&gt;
+&lt;p&gt;对吼，重装，自己作的妖，跪着也要把它弄好（膝盖君: 我招谁惹谁了😭 ），于是乎拿起键盘就是 敲 ~&lt;/p&gt;
+&lt;h3 id=&quot;先安装下依赖&quot;&gt;&lt;a href=&quot;#先安装下依赖&quot; class=&quot;headerlink&quot; title=&quot;先安装下依赖&quot;&gt;&lt;/a&gt;先安装下依赖&lt;/h3&gt;&lt;p&gt;要在绝大多数*nix系的系统中编译Node.js,只要确保系统中有C/C++编译器以及OpenSSL库就可以了，如果没有安装起来也是比较容易的，在Ubuntu下只需执行以下命令就可以很方便的安装&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随记" scheme="http://ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://ijason.me/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>加密算法简介</title>
