@@ -2,10 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>時之繁花_JasonY的博客</title>
   
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.ijason.me/"/>
-  <updated>2016-12-13T15:05:15.000Z</updated>
+  <updated>2018-04-03T02:36:52.404Z</updated>
   <id>http://blog.ijason.me/</id>
   
   <author>
@@ -20,23 +21,9 @@
     <link href="http://blog.ijason.me/p/c918e033/"/>
     <id>http://blog.ijason.me/p/c918e033/</id>
     <published>2016-11-28T10:23:20.000Z</published>
-    <updated>2016-12-13T15:05:15.000Z</updated>
+    <updated>2018-04-03T02:36:52.404Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天在自己的VPS上面捣鼓东西，却不小心把先前已经装好的Node环境给…给…搞坏了（ps:别问我是怎么搞玩坏的，因为我也想知道😂 ）那么问题来了，搞坏了肿么办。。。(画外音:笨啊，重装呀，重装不会吗？) </p>
-<p>对吼，重装，自己作的妖，跪着也要把它弄好（膝盖君: 我招谁惹谁了😭 ），于是乎拿起键盘就是 敲 ~</p>
-<h3 id="先安装下依赖"><a href="#先安装下依赖" class="headerlink" title="先安装下依赖"></a>先安装下依赖</h3><p>要在绝大多数*nix系的系统中编译Node.js,只要确保系统中有C/C++编译器以及OpenSSL库就可以了，如果没有安装起来也是比较容易的，在Ubuntu下只需执行以下命令就可以很方便的安装<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install g++ libssl-dev apache2-utils curl</div></pre></td></tr></table></figure>
-<h3 id="然后下载Node-js源码到本地并解压缩"><a href="#然后下载Node-js源码到本地并解压缩" class="headerlink" title="然后下载Node.js源码到本地并解压缩"></a>然后下载Node.js源码到本地并解压缩</h3><p>ok 安装完依赖接下来我们再下载安装Node.js 源码包 (ps: 我这里安装的是V0.10.24版,大家可以自己选择所需的版本)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -O http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz</div><div class="line">tar -xzvf node-v0.10.24.tar.gz</div></pre></td></tr></table></figure>
-<h3 id="进入到解压缩的目录进行编译和安装"><a href="#进入到解压缩的目录进行编译和安装" class="headerlink" title="进入到解压缩的目录进行编译和安装"></a>进入到解压缩的目录进行编译和安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd node-v0.10.24 </div><div class="line">./configure</div><div class="line">make</div><div class="line">make test </div><div class="line">make install</div></pre></td></tr></table></figure>
-<h3 id="最后再确保下安装是否成功"><a href="#最后再确保下安装是否成功" class="headerlink" title="最后再确保下安装是否成功"></a>最后再确保下安装是否成功</h3><p>在系统终端下输入并执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
-<p>如果安装成功的话就会显示当前安装的Node.js的版本号</p>
-<p>OK, 打完收工！！！（膝盖君: 谢天谢地，终于好了😒 ）</p>
-<p>怎么样是不是挺简单的哈</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>据说还有个更方便的安装方式，就是用apt-get命令安装，不过我没实际操作过，大家可以试下，具体命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs</div><div class="line">sudo apt-get install npm</div></pre></td></tr></table></figure>
-]]></content>
+    <content type="html"><![CDATA[<p>昨天在自己的VPS上面捣鼓东西，却不小心把先前已经装好的Node环境给…给…搞坏了（ps:别问我是怎么搞玩坏的，因为我也想知道😂 ）那么问题来了，搞坏了肿么办。。。(画外音:笨啊，重装呀，重装不会吗？) </p><p>对吼，重装，自己作的妖，跪着也要把它弄好（膝盖君: 我招谁惹谁了😭 ），于是乎拿起键盘就是 敲 ~</p><h3 id="先安装下依赖"><a href="#先安装下依赖" class="headerlink" title="先安装下依赖"></a>先安装下依赖</h3><p>要在绝大多数*nix系的系统中编译Node.js,只要确保系统中有C/C++编译器以及OpenSSL库就可以了，如果没有安装起来也是比较容易的，在Ubuntu下只需执行以下命令就可以很方便的安装<br><a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install g++ libssl-dev apache2-utils curl</span><br></pre></td></tr></table></figure><h3 id="然后下载Node-js源码到本地并解压缩"><a href="#然后下载Node-js源码到本地并解压缩" class="headerlink" title="然后下载Node.js源码到本地并解压缩"></a>然后下载Node.js源码到本地并解压缩</h3><p>ok 安装完依赖接下来我们再下载安装Node.js 源码包 (ps: 我这里安装的是V0.10.24版,大家可以自己选择所需的版本)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -O http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz</span><br><span class="line">tar -xzvf node-v0.10.24.tar.gz</span><br></pre></td></tr></table></figure><h3 id="进入到解压缩的目录进行编译和安装"><a href="#进入到解压缩的目录进行编译和安装" class="headerlink" title="进入到解压缩的目录进行编译和安装"></a>进入到解压缩的目录进行编译和安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd node-v0.10.24 </span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make test </span><br><span class="line">make install</span><br></pre></td></tr></table></figure><h3 id="最后再确保下安装是否成功"><a href="#最后再确保下安装是否成功" class="headerlink" title="最后再确保下安装是否成功"></a>最后再确保下安装是否成功</h3><p>在系统终端下输入并执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure><p>如果安装成功的话就会显示当前安装的Node.js的版本号</p><p>OK, 打完收工！！！（膝盖君: 谢天谢地，终于好了😒 ）</p><p>怎么样是不是挺简单的哈</p><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>据说还有个更方便的安装方式，就是用apt-get命令安装，不过我没实际操作过，大家可以试下，具体命令如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -58,43 +45,9 @@
     <link href="http://blog.ijason.me/p/c47aa1c0/"/>
     <id>http://blog.ijason.me/p/c47aa1c0/</id>
     <published>2016-07-14T11:55:55.000Z</published>
-    <updated>2016-12-13T15:05:15.000Z</updated>
+    <updated>2018-04-03T02:36:52.404Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="简单的概念"><a href="#简单的概念" class="headerlink" title="简单的概念"></a>简单的概念</h4><ul>
-<li>明文：加密前的信息</li>
-<li>密文：加密后的信息</li>
-<li>加密算法：加密或解密的算法</li>
-<li>密钥：算法使用的钥匙</li>
-</ul>
-<h4 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h4><pre><code>eg: 将123456每位数字都加1后得到234567 
-</code></pre> <a id="more"></a>    
-<p>  在这个例子中：</p>
-<ul>
-<li><p>明文是：123456</p>
-</li>
-<li><p>密文是：234567</p>
-</li>
-<li><p>加密密钥是：1</p>
-</li>
-<li><p>加密算法是：每位加</p>
-</li>
-</ul>
-<h4 id="加密算法种类"><a href="#加密算法种类" class="headerlink" title="加密算法种类"></a>加密算法种类</h4><p>  按照加密的方式我们可以将加密算法大体分成一下三种：</p>
-<ul>
-<li>对称加密算法（加密和解密算法是对称的可能有点抽象你可以理解成同一把钥匙）</li>
-<li>非对称加密算法（加密和解密算法是非对称的可以理解成加密的时候是一把钥匙解密的时候是一把钥匙，典型的就是rsa公钥和私钥）</li>
-<li>经典哈希算法（哈希算法是一种散列算法，有个特殊性是它是不可逆只能通过穷举法超大量的计算才可能算出，一般几率很小，还有就是你同一段的明文两次加密出来的结果是不一样的）</li>
-</ul>
-<h4 id="算法举例"><a href="#算法举例" class="headerlink" title="算法举例"></a>算法举例</h4><ul>
-<li>对称加密算法：DES算法，3DES算法，TDEA算法，Blowfish算法，RC5算法，IDEA算法，AES算法。</li>
-<li>非对称加密算法：RSA、Elgamal、背包算法、Rabin、D-H、ECC。</li>
-<li>经典的哈希算法：MD2、MD4、MD5 和 SHA-1（目的是将任意长输入通过算法变为固定长输出，且保证输入变化一点输出都不同，且不能反向解密）</li>
-</ul>
-<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>  非对称加密算法可能是世界上最重要的算法，它是当今电子商务等领域的基石。</p>
-<p>  简而言之，非对称加密就是指加密公钥和解密密钥是不同的，而且加密公钥和解密密钥是成对出现。非对称加密又叫公钥加密，也就是说成对的密钥，其中一个是对外公开的，所有人都可以获得，人们称之为公钥；而与之相对应的称之为私钥，只有这对密钥的生成者才能拥有。</p>
-<p>  对于一个私钥，有且只有一个与之对应的公钥。公钥公开给任何人，私钥通常是只有生成者拥有。公/私钥通常是1024位或者2048位，越长安全系数越高，但是解密越困难。尽管拿到了公钥，如果没有私钥，要想解密那几乎是不可能的，至少现在在世界上还没有人公开出来说成功解密的。</p>
-<p>  关于公钥和私钥总结一句话：公钥和密钥成对出现，其中公钥负责加密 ，私钥负责解密</p>
-]]></content>
+    <content type="html"><![CDATA[<h4 id="简单的概念"><a href="#简单的概念" class="headerlink" title="简单的概念"></a>简单的概念</h4><ul><li>明文：加密前的信息</li><li>密文：加密后的信息</li><li>加密算法：加密或解密的算法</li><li>密钥：算法使用的钥匙</li></ul><h4 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h4><pre><code>eg: 将123456每位数字都加1后得到234567 </code></pre> <a id="more"></a>    <p>  在这个例子中：</p><ul><li><p>明文是：123456</p></li><li><p>密文是：234567</p></li><li><p>加密密钥是：1</p></li><li><p>加密算法是：每位加</p></li></ul><h4 id="加密算法种类"><a href="#加密算法种类" class="headerlink" title="加密算法种类"></a>加密算法种类</h4><p>  按照加密的方式我们可以将加密算法大体分成一下三种：</p><ul><li>对称加密算法（加密和解密算法是对称的可能有点抽象你可以理解成同一把钥匙）</li><li>非对称加密算法（加密和解密算法是非对称的可以理解成加密的时候是一把钥匙解密的时候是一把钥匙，典型的就是rsa公钥和私钥）</li><li>经典哈希算法（哈希算法是一种散列算法，有个特殊性是它是不可逆只能通过穷举法超大量的计算才可能算出，一般几率很小，还有就是你同一段的明文两次加密出来的结果是不一样的）</li></ul><h4 id="算法举例"><a href="#算法举例" class="headerlink" title="算法举例"></a>算法举例</h4><ul><li>对称加密算法：DES算法，3DES算法，TDEA算法，Blowfish算法，RC5算法，IDEA算法，AES算法。</li><li>非对称加密算法：RSA、Elgamal、背包算法、Rabin、D-H、ECC。</li><li>经典的哈希算法：MD2、MD4、MD5 和 SHA-1（目的是将任意长输入通过算法变为固定长输出，且保证输入变化一点输出都不同，且不能反向解密）</li></ul><h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>  非对称加密算法可能是世界上最重要的算法，它是当今电子商务等领域的基石。</p><p>  简而言之，非对称加密就是指加密公钥和解密密钥是不同的，而且加密公钥和解密密钥是成对出现。非对称加密又叫公钥加密，也就是说成对的密钥，其中一个是对外公开的，所有人都可以获得，人们称之为公钥；而与之相对应的称之为私钥，只有这对密钥的生成者才能拥有。</p><p>  对于一个私钥，有且只有一个与之对应的公钥。公钥公开给任何人，私钥通常是只有生成者拥有。公/私钥通常是1024位或者2048位，越长安全系数越高，但是解密越困难。尽管拿到了公钥，如果没有私钥，要想解密那几乎是不可能的，至少现在在世界上还没有人公开出来说成功解密的。</p><p>  关于公钥和私钥总结一句话：公钥和密钥成对出现，其中公钥负责加密 ，私钥负责解密</p>]]></content>
     
     <summary type="html">
     
@@ -121,29 +74,9 @@
     <link href="http://blog.ijason.me/p/b25ac606/"/>
     <id>http://blog.ijason.me/p/b25ac606/</id>
     <published>2016-07-11T12:02:26.000Z</published>
-    <updated>2016-12-13T15:05:15.000Z</updated>
+    <updated>2018-04-03T02:36:52.404Z</updated>
     
-    <content type="html"><![CDATA[<p>　　比如，我改变一种习惯，从前我不吃胡萝卜，现在我开始吃胡萝卜，这样每次我吃胡萝卜的时候，都想到你；</p>
-<p>　　比如，从现在开始，一年之内，我搭乘公车，都提前一站下来，走路到目的地，这样我可以慢下来，看看周围的人和树，还有店铺，它们沉默不语，我也是，因为我想到了你；<br>　　<a id="more"></a><br>　　比如，有一个词我永远都不用，每次要用到的时候，我很小心，绕开它，换过一个词，这样我又想到你一次；</p>
-<p>　　比如，每次我到大街上，如果我很高兴，我就大声叫你的名字，你的名字听起来这么普通，所以，我每次叫你，都会有人回过头来看我，以为我叫的是他们，他们也许对我笑，也许露出困惑的表情，我很高兴，我觉得也许有一次，回头看我的人正好是你；</p>
-<p>　　比如，夏天的时候，天气太热了，我把手里的水从头上淋下来，这么凉，我把这个行为叫做你；</p>
-<p>　　比如，我喝酒，我从前常常和你一起喝酒，我一口气喝完了整杯酒，我把这个俗气，而又常见的喝酒方式，都宣称是和你喝酒时才用的；</p>
-<p>　　比如，我要去锻炼了，我是这么讨厌锻炼的人，但你叫我去锻炼，我就去锻炼，这样我每次都皱着眉头，想起你一次；</p>
-<p>　　比如，我不怎么提起，也不怎么去你的那个城市了，但正因为如此，我反而常常想起那里，想起你；</p>
-<p>　　比如，在路上，我看见每个陌生人，他们或者高兴，或者悲伤，或者面无表情，我都觉得他们是有理由的，因为他们不认识你；而我自己或者高兴，或者悲伤，或者面无表情，都是有理由的，因为我认识你；这样子随时随地都可能想起你；</p>
-<p>　　比如，我找到那些和我一样认识你的人，他们或者提起你，或者不提起你，但我知道都和你有关，不管我见到几个人，但至少都要想到你一次；</p>
-<p>　　比如，我阅读那些俗气的书，阅读那些高深的书，都有可能想到你，因为你就是这么无孔不入，既阅读俗气的书，又阅读高深的书；</p>
-<p>　　比如，我写小故事给你，因为你要我写小故事给你，我始终都没有写，这次我终于写了，故事里的人和你有一点像，我每看一次，就想到你一次；</p>
-<p>　　比如，《Perfect Day》，这首歌我也很喜欢，你也很喜欢，这个词我也很喜欢，你也很喜欢，但我被你打败了，这个词归你了，这首歌归你了，它变成你喜欢的，我才喜欢了；别人也被你打败了，他们都变成因为你喜欢，所以我才会注意到他们也喜欢；</p>
-<p>　　比如，以后我不能玩捉迷藏游戏，因为每次我都想到你藏起来了，我可能找不到你；但我又会很想要玩捉迷藏游戏，因为到最后，我总归是找得到你的。这样子，无论我玩不玩捉迷藏游戏，我都会想到你；</p>
-<p>　　比如，有一天我无意中找到一本书，那上面有你的签名，又有一天我无意中找到了一张相片，那上面有你，我把它们拿给别人看，说：瞧，我有这么好的东西。那个时候我可能已经有点老，记性也不太好，不过还是想到你一次；</p>
-<p>　　比如，有一天有人问我，认不认识你，记不记得关于你的事情，我回答说：记得。于是我把所有关于你的事情，又想了一遍；</p>
-<p>　　比如，有一天有人问我，认不认识你，记不记得关于你的事情，我回答说：不记得。但是我在心里，把所有关于你的事情，又想了一遍；</p>
-<p>　　比如，你最好马上出现在我面前，嘲笑我，对我哈哈大笑，这样子我会马上原谅你，并且给你看这篇东西，我会同样哈哈大笑，说：我一点都不想念你。不过这样说其实是因为我有点羞涩。</p>
-<p>　　比如。比如。</p>
-<p>　　比如我写下来，这一篇给你，给马骅。我自己又从头看了一遍，觉得可以给你了。给马骅。天已经亮了，从天很黑到天开始亮，有好几个小时，我都想到你了。我的朋友会跟我提到这一篇，提到一次，就又想到你一次。</p>
-<p>　　— 摘自饭饭著作《路上有惊慌》</p>
-]]></content>
+    <content type="html"><![CDATA[<p>　　比如，我改变一种习惯，从前我不吃胡萝卜，现在我开始吃胡萝卜，这样每次我吃胡萝卜的时候，都想到你；</p><p>　　比如，从现在开始，一年之内，我搭乘公车，都提前一站下来，走路到目的地，这样我可以慢下来，看看周围的人和树，还有店铺，它们沉默不语，我也是，因为我想到了你；<br>　　<a id="more"></a><br>　　比如，有一个词我永远都不用，每次要用到的时候，我很小心，绕开它，换过一个词，这样我又想到你一次；</p><p>　　比如，每次我到大街上，如果我很高兴，我就大声叫你的名字，你的名字听起来这么普通，所以，我每次叫你，都会有人回过头来看我，以为我叫的是他们，他们也许对我笑，也许露出困惑的表情，我很高兴，我觉得也许有一次，回头看我的人正好是你；</p><p>　　比如，夏天的时候，天气太热了，我把手里的水从头上淋下来，这么凉，我把这个行为叫做你；</p><p>　　比如，我喝酒，我从前常常和你一起喝酒，我一口气喝完了整杯酒，我把这个俗气，而又常见的喝酒方式，都宣称是和你喝酒时才用的；</p><p>　　比如，我要去锻炼了，我是这么讨厌锻炼的人，但你叫我去锻炼，我就去锻炼，这样我每次都皱着眉头，想起你一次；</p><p>　　比如，我不怎么提起，也不怎么去你的那个城市了，但正因为如此，我反而常常想起那里，想起你；</p><p>　　比如，在路上，我看见每个陌生人，他们或者高兴，或者悲伤，或者面无表情，我都觉得他们是有理由的，因为他们不认识你；而我自己或者高兴，或者悲伤，或者面无表情，都是有理由的，因为我认识你；这样子随时随地都可能想起你；</p><p>　　比如，我找到那些和我一样认识你的人，他们或者提起你，或者不提起你，但我知道都和你有关，不管我见到几个人，但至少都要想到你一次；</p><p>　　比如，我阅读那些俗气的书，阅读那些高深的书，都有可能想到你，因为你就是这么无孔不入，既阅读俗气的书，又阅读高深的书；</p><p>　　比如，我写小故事给你，因为你要我写小故事给你，我始终都没有写，这次我终于写了，故事里的人和你有一点像，我每看一次，就想到你一次；</p><p>　　比如，《Perfect Day》，这首歌我也很喜欢，你也很喜欢，这个词我也很喜欢，你也很喜欢，但我被你打败了，这个词归你了，这首歌归你了，它变成你喜欢的，我才喜欢了；别人也被你打败了，他们都变成因为你喜欢，所以我才会注意到他们也喜欢；</p><p>　　比如，以后我不能玩捉迷藏游戏，因为每次我都想到你藏起来了，我可能找不到你；但我又会很想要玩捉迷藏游戏，因为到最后，我总归是找得到你的。这样子，无论我玩不玩捉迷藏游戏，我都会想到你；</p><p>　　比如，有一天我无意中找到一本书，那上面有你的签名，又有一天我无意中找到了一张相片，那上面有你，我把它们拿给别人看，说：瞧，我有这么好的东西。那个时候我可能已经有点老，记性也不太好，不过还是想到你一次；</p><p>　　比如，有一天有人问我，认不认识你，记不记得关于你的事情，我回答说：记得。于是我把所有关于你的事情，又想了一遍；</p><p>　　比如，有一天有人问我，认不认识你，记不记得关于你的事情，我回答说：不记得。但是我在心里，把所有关于你的事情，又想了一遍；</p><p>　　比如，你最好马上出现在我面前，嘲笑我，对我哈哈大笑，这样子我会马上原谅你，并且给你看这篇东西，我会同样哈哈大笑，说：我一点都不想念你。不过这样说其实是因为我有点羞涩。</p><p>　　比如。比如。</p><p>　　比如我写下来，这一篇给你，给马骅。我自己又从头看了一遍，觉得可以给你了。给马骅。天已经亮了，从天很黑到天开始亮，有好几个小时，我都想到你了。我的朋友会跟我提到这一篇，提到一次，就又想到你一次。</p><p>　　— 摘自饭饭著作《路上有惊慌》</p>]]></content>
     
     <summary type="html">
     
@@ -164,24 +97,14 @@
     <link href="http://blog.ijason.me/p/dd2b6a6/"/>
     <id>http://blog.ijason.me/p/dd2b6a6/</id>
     <published>2016-07-05T13:25:28.000Z</published>
-    <updated>2016-12-25T08:59:36.000Z</updated>
+    <updated>2018-04-03T02:36:52.404Z</updated>
     
-    <content type="html"><![CDATA[<p>今天和往常一样打开一个包含<a href="https://cocoapods.org/" target="_blank" rel="external">CocoaPods</a>类库的项目  </p>
-<h4 id="命令行执行"><a href="#命令行执行" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ pod install --verbose --no-repo-update</div><div class="line">[!] The &apos;master&apos; repo requires CocoaPods 0.39.0 -</div></pre></td></tr></table></figure>
-<p>what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。<br><a id="more"></a></p>
-<h4 id="命令行执行-1"><a href="#命令行执行-1" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ pod --version</div><div class="line">0.29.0</div></pre></td></tr></table></figure>
-<p>额~~ 看来的确是需要更新了😔</p>
-<h4 id="命令行更新步骤"><a href="#命令行更新步骤" class="headerlink" title="命令行更新步骤"></a>命令行更新步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ sudo gem update --system  // 首先我们先更新下gem，在国内如果没有FQ的话 建议切换到淘宝源</div><div class="line"></div><div class="line">$ gem sources --remove https://rubygems.org/  // 移除官方源切换到淘宝源</div><div class="line">$ gem sources -a https://ruby.taobao.org/  </div><div class="line"></div><div class="line">$ gem sources -l  // 查看源</div><div class="line">\*\*\* CURRENT SOURCES \*\*\*</div><div class="line">https://ruby.taobao.org/</div><div class="line"></div><div class="line">$ sudo gem install cocoapods // 安装cocoapods</div></pre></td></tr></table></figure>
-<p>其实你应该发现到更新和安装过程是一样的，OK,我们现在再来看下CocoaPods版本~</p>
-<h4 id="命令行执行-2"><a href="#命令行执行-2" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ pod --version</div><div class="line">0.39.0</div></pre></td></tr></table></figure>
-<p>OK, 打完收工!!! </p>
-<p>Now,Enjoy it  👻 👻 👻 </p>
-]]></content>
+    <content type="html"><![CDATA[<p>今天和往常一样打开一个包含<a href="https://cocoapods.org/" target="_blank" rel="noopener">CocoaPods</a>类库的项目  </p><h4 id="命令行执行"><a href="#命令行执行" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod install --verbose --no-repo-update</span><br><span class="line">[!] The &apos;master&apos; repo requires CocoaPods 0.39.0 -</span><br></pre></td></tr></table></figure><p>what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。<br><a id="more"></a></p><h4 id="命令行执行-1"><a href="#命令行执行-1" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod --version</span><br><span class="line">0.29.0</span><br></pre></td></tr></table></figure><p>额~~ 看来的确是需要更新了😔</p><h4 id="命令行更新步骤"><a href="#命令行更新步骤" class="headerlink" title="命令行更新步骤"></a>命令行更新步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gem update --system  // 首先我们先更新下gem，在国内如果没有FQ的话 建议切换到淘宝源</span><br><span class="line"></span><br><span class="line">$ gem sources --remove https://rubygems.org/  // 移除官方源切换到淘宝源</span><br><span class="line">$ gem sources -a https://ruby.taobao.org/  </span><br><span class="line"></span><br><span class="line">$ gem sources -l  // 查看源</span><br><span class="line">\*\*\* CURRENT SOURCES \*\*\*</span><br><span class="line">https://ruby.taobao.org/</span><br><span class="line"></span><br><span class="line">$ sudo gem install cocoapods // 安装cocoapods</span><br></pre></td></tr></table></figure><p>其实你应该发现到更新和安装过程是一样的，OK,我们现在再来看下CocoaPods版本~</p><h4 id="命令行执行-2"><a href="#命令行执行-2" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod --version</span><br><span class="line">0.39.0</span><br></pre></td></tr></table></figure><p>OK, 打完收工!!! </p><p>Now,Enjoy it  👻 👻 👻 </p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;今天和往常一样打开一个包含&lt;a href=&quot;https://cocoapods.org/&quot;&gt;CocoaPods&lt;/a&gt;类库的项目  &lt;/p&gt;
-&lt;h4 id=&quot;命令行执行&quot;&gt;&lt;a href=&quot;#命令行执行&quot; class=&quot;headerlink&quot; title=&quot;命令行执行&quot;&gt;&lt;/a&gt;命令行执行&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ pod install --verbose --no-repo-update&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[!] The &amp;apos;master&amp;apos; repo requires CocoaPods 0.39.0 -&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;今天和往常一样打开一个包含&lt;a href=&quot;https://cocoapods.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CocoaPods&lt;/a&gt;类库的项目  &lt;/p&gt;
+&lt;h4 id=&quot;命令行执行&quot;&gt;&lt;a href=&quot;#命令行执行&quot; class=&quot;headerlink&quot; title=&quot;命令行执行&quot;&gt;&lt;/a&gt;命令行执行&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod install --verbose --no-repo-update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[!] The &amp;apos;master&amp;apos; repo requires CocoaPods 0.39.0 -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。&lt;br&gt;
     
     </summary>
