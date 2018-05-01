@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.ijason.me/"/>
-  <updated>2018-04-03T02:36:52.404Z</updated>
+  <updated>2018-05-01T02:52:38.000Z</updated>
   <id>http://blog.ijason.me/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git 的 .gitignore 配置</title>
+    <link href="http://blog.ijason.me/p/98bf8440/"/>
+    <id>http://blog.ijason.me/p/98bf8440/</id>
+    <published>2018-04-30T17:08:14.000Z</published>
+    <updated>2018-05-01T02:52:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果你正在使用 git 做版本管理，想必对 <code>.gitignore</code> 文件并不会陌生 <code>.gitignore</code> 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。</p><h3 id="配置语法："><a href="#配置语法：" class="headerlink" title="配置语法："></a>配置语法：</h3><ul><li>以斜杠“/”开头表示目录；</li><li>以星号“*”通配多个字符；</li><li>以问号“?”通配单个字符；</li><li>以方括号“[]”包含单个字符的匹配列表；</li><li>以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；</li></ul><p>此外，git 对于 <code>.gitignore</code> 配置文件是按行从上到下进行规则匹配的，这意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效。<br><a id="more"></a></p><h3 id="规则示例与说明："><a href="#规则示例与说明：" class="headerlink" title="规则示例与说明："></a>规则示例与说明：</h3><ol><li><p>规则：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd1/*</span><br></pre></td></tr></table></figure><p> 说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 /fd1/ 目录，还是某个子目录 /child/fd1/ 目录，都会被忽略。</p></li><li><p>规则：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/fd1/*</span><br></pre></td></tr></table></figure><p> 说明：忽略根目录下的 /fd1/ 目录的全部内容。</p></li><li><p>规则：</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    </span><br><span class="line">!.gitignore</span><br><span class="line">    </span><br><span class="line">!/fw/bin/</span><br><span class="line">    </span><br><span class="line">!/fw/sf/</span><br></pre></td></tr></table></figure><p> 说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录。</p></li></ol><h3 id="范例："><a href="#范例：" class="headerlink" title="范例："></a>范例：</h3><ol><li><p>忽略<em>.o和</em>.a文件</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.[oa]</span><br></pre></td></tr></table></figure></li><li><p>忽略<em>.b和</em>.B文件，my.b除外</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*.[bB]</span><br><span class="line"></span><br><span class="line">!my.b</span><br></pre></td></tr></table></figure></li><li><p>忽略dbg文件和dbg目录</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br></pre></td></tr></table></figure></li><li><p>只忽略dbg目录，不忽略dbg文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg/</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li>只忽略dbg文件，不忽略dbg目录 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br><span class="line">!dbg/</span><br></pre></td></tr></table></figure></li></ol><ol start="5"><li><p>只忽略当前目录下的dbg文件和目录，子目录的dbg不在忽略范围内</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dbg</span><br></pre></td></tr></table></figure></li></ol><h3 id="为什么我增加了-gitignore文件，-但是里面的规则却没有生效？"><a href="#为什么我增加了-gitignore文件，-但是里面的规则却没有生效？" class="headerlink" title="为什么我增加了.gitignore文件， 但是里面的规则却没有生效？"></a>为什么我增加了<code>.gitignore</code>文件， 但是里面的规则却没有生效？</h3><p>这是因为我们误解了<code>.gitignore</code>文件的用途，该文件只能作用于 <strong>Untracked Files</strong>，也就是那些从来没有被 git 记录过的文件（自添加以后，从未被 add 及 commit 过的文件）。</p><p>之所以你的规则不生效，是因为那些文件曾经被 git 记录过，因此 <code>.gitignore</code> 对它们完全无效。</p><p>所以如果你不慎在创建 .gitignore 文件之前就 push 了项目，那么即使你在 .gitignore 文件中写入新的过滤规则，这些规则也不会起作用，git 仍然会对所有文件进行版本管理。</p><p>简单来说，出现这种问题的原因就是 git 已经开始管理这些文件了，所以你无法再通过过滤规则来过滤它们。</p><p>所以大家记得一定要养成在项目开始就创建 <code>.gitignore</code> 文件的习惯，否则一旦 <code>push</code>，处理起来会比较麻烦。</p><p>那么有没有办法解决呢？</p><p>答案是：有的。</p><h3 id="举个栗子："><a href="#举个栗子：" class="headerlink" title="举个栗子："></a>举个栗子：</h3><p>  比如说现在有一个 nodejs 项目，一开始的时候就忘记了创建 <code>.gitignore</code> 文件忽略掉 node_modules 的内容，所以其中的内容已经被提交了。</p><p>  即使你紧接着在 <code>.gitignore</code> 加了一行 node_modules , 已经被提交的文件是不会自动删除的。</p><p>  所以这时候你就需要做的就是：</p><ol><li><p>从 git 的数据库中删除对于该文件的追踪；</p> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached filePath (filePath 为文件路径)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>nodejs案例就是</span><br><span class="line">git rm --cached node_modules</span><br></pre></td></tr></table></figure></li><li><p>把对应的规则写入 <code>.gitignore</code>，让忽略真正生效；</p> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#nodejs案例就是在 .gitignore 文件里添加一下内容</span><br><span class="line"></span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure></li><li><p>提交 ＋ 推送。</p> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>例如</span><br><span class="line">git commit -m 'delete remote some file'</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li></ol><h3 id="gitignore文件的妙用"><a href="#gitignore文件的妙用" class="headerlink" title=".gitignore文件的妙用"></a><code>.gitignore</code>文件的妙用</h3><p><code>.gitignore</code> 还有个有意思的小功能， 一个空的 <code>.gitignore</code> 文件可以被当作是一个 <code>placeholder</code> 。当你需要为项目创建一个空的 log 目录时， 这就变的很有用。</p><p>例如你可以创建一个 log 目录 在里面放置一个空的 <code>.gitignore</code> 文件。这样当你 clone 这个 repo 的时候 git 会自动的创建好一个空的 log 目录了。</p><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul><li><p><a href="https://git-scm.com/docs/git-rm/" target="_blank" rel="noopener">git-rm Documentation</a> </p></li><li><p><a href="https://segmentfault.com/q/1010000000430426/" target="_blank" rel="noopener">git忽略已经被提交的文件</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如果你正在使用 git 做版本管理，想必对 &lt;code&gt;.gitignore&lt;/code&gt; 文件并不会陌生 &lt;code&gt;.gitignore&lt;/code&gt; 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。&lt;/p&gt;
+&lt;h3 id=&quot;配置语法：&quot;&gt;&lt;a href=&quot;#配置语法：&quot; class=&quot;headerlink&quot; title=&quot;配置语法：&quot;&gt;&lt;/a&gt;配置语法：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;以斜杠“/”开头表示目录；&lt;/li&gt;
+&lt;li&gt;以星号“*”通配多个字符；&lt;/li&gt;
+&lt;li&gt;以问号“?”通配单个字符；&lt;/li&gt;
+&lt;li&gt;以方括号“[]”包含单个字符的匹配列表；&lt;/li&gt;
+&lt;li&gt;以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，git 对于 &lt;code&gt;.gitignore&lt;/code&gt; 配置文件是按行从上到下进行规则匹配的，这意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随记" scheme="http://blog.ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+      <category term="git" scheme="http://blog.ijason.me/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在Ubuntu 14.04下安装Node.js</title>
