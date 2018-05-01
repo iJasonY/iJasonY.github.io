@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="時之繁花_JasonY的博客">
 <meta property="og:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-01T02:52:38.000Z">
+<meta property="og:updated_time" content="2018-05-01T04:15:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 的 .gitignore 配置">
 <meta name="twitter:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
@@ -369,7 +369,7 @@
 </li>
 </ol>
 <h3 id="gitignore文件的妙用"><a href="#gitignore文件的妙用" class="headerlink" title=".gitignore文件的妙用"></a><code>.gitignore</code>文件的妙用</h3><p><code>.gitignore</code> 还有个有意思的小功能， 一个空的 <code>.gitignore</code> 文件可以被当作是一个 <code>placeholder</code> 。当你需要为项目创建一个空的 log 目录时， 这就变的很有用。</p>
-<p>例如你可以创建一个 log 目录 在里面放置一个空的 <code>.gitignore</code> 文件。这样当你 clone 这个 repo 的时候 git 会自动的创建好一个空的 log 目录了。</p>
+<p>例如你可以创建一个 log 目录 在里面放置一个空的 <code>.gitignore</code> 文件。这样当你 clone 这个 repo 的时候 git 会自动的创建好一个空的 log 目录了。（正常情况下 git 是不会推送一个空目录到 repo 的）</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><p><a href="https://git-scm.com/docs/git-rm/" target="_blank" rel="noopener">git-rm Documentation</a> </p>
 </li>
