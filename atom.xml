@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.ijason.me/"/>
-  <updated>2018-05-01T04:15:44.000Z</updated>
+  <updated>2018-05-27T06:16:00.025Z</updated>
   <id>http://blog.ijason.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>巧用一个小技巧实现自动打包完成后发邮件通知到相关人员</title>
+    <link href="http://blog.ijason.me/p/e030e36e/"/>
+    <id>http://blog.ijason.me/p/e030e36e/</id>
+    <published>2018-05-27T01:36:31.000Z</published>
+    <updated>2018-05-27T06:16:00.025Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题背景："><a href="#问题背景：" class="headerlink" title="问题背景："></a>问题背景：</h3><p>   最近在公司里利用 <code>Jenkins</code> 来实施自动化打包时，遇到一个问题就是：我在打包完成后要如何及时的通知到产品与测试等相关人员。</p><h4 id="搁浅"><a href="#搁浅" class="headerlink" title="搁浅"></a>搁浅</h4><p>   原本是打算在自动化流程内写些脚本去调用邮件服务实现，但是在网上查找了几篇文章后，感觉过程都较为复杂，在实施过程中出现了一些问题没法及时有效的找到原因（PS:毕竟我没有专门去学习过 <code>Shell</code>、<code>Python</code> 等脚本语言)，同时目前自己工作也比较繁忙所以也更加无暇去研究了，于是就这样一直搁置了这个需求。</p><h4 id="柳暗花明"><a href="#柳暗花明" class="headerlink" title="柳暗花明"></a>柳暗花明</h4><p>   后来有一天，我发现发测试包的发布平台每次都会在我上传测试包成功后给我的邮箱发送一封发布成功的通知邮件</p><p>   于是灵机一动：我们是不是可以利用这个通知邮件来做点什么呢？🤔 <a id="more"></a> </p><p>   后来想起来邮箱里好像有一个叫“收信规则”的服务。嗯~ 对，就是它，我们完全可以利用它来办到。</p><h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>   此时这个问题的解决方法就很明朗了，我们只需设置下收信规则就行了，(注：以下设置是在QQ邮箱内的设置步骤，其他邮箱还请自行探索哈) 具体设置步骤如下：</p><p>   首先打开你的QQ邮箱-&gt;在页面左上角的有个”设置”点击进去，然后切换到”收信规则”选项卡-&gt;在页面右测有个“创建收信规则”按钮，点击进去你会看到以下的页面，接下来的具体设置见图<br><img src="http://image.ijason.me/WX20180527-103652.png" alt="20180527-103652"></p><p>   这样设置完后，到时候发包平台的通知邮件一旦发送到你邮箱里 就会自动转发到你设置的那个邮箱里。至此整个问题得到解决</p><h3 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h3><p>   这个方法目前还存在着几个问题：</p><ol><li>严重依赖于第三方发布平台的邮件通知，如果第三方发布平台的邮件通知由于一些原因没有发出，那么我们的整个流程也就跟着受到影响。</li><li>无法邮件内容受制于第三方平台的邮件内容，无法自己定制邮件内容。</li><li>邮箱的“收信规则”服务一次只能转发一个邮箱，且无法设置一个邮件组；那么如果我要通知多人怎么办？(目前我这边是设置了多个类似的规则去实现，但是如果需要通知的人数众多的时候，这方法就显得有点捉襟见肘了，因为规则太多，维护的成本太高)</li></ol><p>接下来我将继续寻找更好的解决方法，同时如果您有更好的方法或者思路，还望不吝赐教。Peace~</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题背景：&quot;&gt;&lt;a href=&quot;#问题背景：&quot; class=&quot;headerlink&quot; title=&quot;问题背景：&quot;&gt;&lt;/a&gt;问题背景：&lt;/h3&gt;&lt;p&gt;   最近在公司里利用 &lt;code&gt;Jenkins&lt;/code&gt; 来实施自动化打包时，遇到一个问题就是：我在打包完成后要如何及时的通知到产品与测试等相关人员。&lt;/p&gt;
+&lt;h4 id=&quot;搁浅&quot;&gt;&lt;a href=&quot;#搁浅&quot; class=&quot;headerlink&quot; title=&quot;搁浅&quot;&gt;&lt;/a&gt;搁浅&lt;/h4&gt;&lt;p&gt;   原本是打算在自动化流程内写些脚本去调用邮件服务实现，但是在网上查找了几篇文章后，感觉过程都较为复杂，在实施过程中出现了一些问题没法及时有效的找到原因（PS:毕竟我没有专门去学习过 &lt;code&gt;Shell&lt;/code&gt;、&lt;code&gt;Python&lt;/code&gt; 等脚本语言)，同时目前自己工作也比较繁忙所以也更加无暇去研究了，于是就这样一直搁置了这个需求。&lt;/p&gt;
+&lt;h4 id=&quot;柳暗花明&quot;&gt;&lt;a href=&quot;#柳暗花明&quot; class=&quot;headerlink&quot; title=&quot;柳暗花明&quot;&gt;&lt;/a&gt;柳暗花明&lt;/h4&gt;&lt;p&gt;   后来有一天，我发现发测试包的发布平台每次都会在我上传测试包成功后给我的邮箱发送一封发布成功的通知邮件&lt;/p&gt;
+&lt;p&gt;   于是灵机一动：我们是不是可以利用这个通知邮件来做点什么呢？🤔
+    
+    </summary>
+    
+      <category term="ci" scheme="http://blog.ijason.me/categories/ci/"/>
+    
+    
+      <category term="jenkins" scheme="http://blog.ijason.me/tags/jenkins/"/>
+    
+  </entry>
   
   <entry>
     <title>git 的 .gitignore 配置</title>
@@ -119,30 +144,6 @@
     
     
       <category term="文摘" scheme="http://blog.ijason.me/tags/%E6%96%87%E6%91%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CocoaPods版本升级</title>
-    <link href="http://blog.ijason.me/p/dd2b6a6/"/>
-    <id>http://blog.ijason.me/p/dd2b6a6/</id>
-    <published>2016-07-05T13:25:28.000Z</published>
-    <updated>2018-04-03T02:36:52.404Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天和往常一样打开一个包含<a href="https://cocoapods.org/" target="_blank" rel="noopener">CocoaPods</a>类库的项目  </p><h4 id="命令行执行"><a href="#命令行执行" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod install --verbose --no-repo-update</span><br><span class="line">[!] The &apos;master&apos; repo requires CocoaPods 0.39.0 -</span><br></pre></td></tr></table></figure><p>what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。<br><a id="more"></a></p><h4 id="命令行执行-1"><a href="#命令行执行-1" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod --version</span><br><span class="line">0.29.0</span><br></pre></td></tr></table></figure><p>额~~ 看来的确是需要更新了😔</p><h4 id="命令行更新步骤"><a href="#命令行更新步骤" class="headerlink" title="命令行更新步骤"></a>命令行更新步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gem update --system  // 首先我们先更新下gem，在国内如果没有FQ的话 建议切换到淘宝源</span><br><span class="line"></span><br><span class="line">$ gem sources --remove https://rubygems.org/  // 移除官方源切换到淘宝源</span><br><span class="line">$ gem sources -a https://ruby.taobao.org/  </span><br><span class="line"></span><br><span class="line">$ gem sources -l  // 查看源</span><br><span class="line">\*\*\* CURRENT SOURCES \*\*\*</span><br><span class="line">https://ruby.taobao.org/</span><br><span class="line"></span><br><span class="line">$ sudo gem install cocoapods // 安装cocoapods</span><br></pre></td></tr></table></figure><p>其实你应该发现到更新和安装过程是一样的，OK,我们现在再来看下CocoaPods版本~</p><h4 id="命令行执行-2"><a href="#命令行执行-2" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod --version</span><br><span class="line">0.39.0</span><br></pre></td></tr></table></figure><p>OK, 打完收工!!! </p><p>Now,Enjoy it  👻 👻 👻 </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天和往常一样打开一个包含&lt;a href=&quot;https://cocoapods.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CocoaPods&lt;/a&gt;类库的项目  &lt;/p&gt;
-&lt;h4 id=&quot;命令行执行&quot;&gt;&lt;a href=&quot;#命令行执行&quot; class=&quot;headerlink&quot; title=&quot;命令行执行&quot;&gt;&lt;/a&gt;命令行执行&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod install --verbose --no-repo-update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[!] The &amp;apos;master&amp;apos; repo requires CocoaPods 0.39.0 -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随记" scheme="http://blog.ijason.me/categories/%E9%9A%8F%E8%AE%B0/"/>
-    
-    
-      <category term="iOS" scheme="http://blog.ijason.me/tags/iOS/"/>
     
   </entry>
   
