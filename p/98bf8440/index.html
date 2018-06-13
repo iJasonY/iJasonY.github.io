@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="iJasonY&#39;s Blog">
 <meta property="og:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-01T04:15:44.000Z">
+<meta property="og:updated_time" content="2018-06-13T09:40:39.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 的 .gitignore 配置">
 <meta name="twitter:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
@@ -355,7 +355,7 @@
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached filePath (filePath 为文件路径)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>nodejs案例就是</span><br><span class="line">git rm --cached node_modules</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>把对应的规则写入 <code>.gitignore</code>，让忽略真正生效；</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#nodejs案例就是在 .gitignore 文件里添加一下内容</span><br><span class="line"></span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#nodejs案例就是在 .gitignore 文件里添加以下内容</span><br><span class="line"></span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>提交 ＋ 推送。</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>例如</span><br><span class="line">git commit -m 'delete remote some file'</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
