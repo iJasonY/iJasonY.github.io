@@ -94,12 +94,12 @@
 <meta property="og:site_name" content="iJasonY&#39;s Blog">
 <meta property="og:description" content="问题背景：   最近在公司里利用 Jenkins 来实施自动化打包时，遇到一个问题就是：我在打包完成后要如何及时的通知到产品与测试等相关人员。 搁浅   原本是打算在自动化流程内写些脚本去调用邮件服务实现，但是在网上查找了几篇文章后，感觉过程都较为复杂，在实施过程中出现了一些问题没法及时有效的找到原因（PS:毕竟我没有专门去学习过 Shell、Python 等脚本语言)，同时目前自己工作也比较繁">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://image.ijason.me/WX20180527-103652.png">
-<meta property="og:updated_time" content="2018-06-10T02:59:27.781Z">
+<meta property="og:image" content="https://t1.aixinxi.net/o_1chi4caga1e3t1tn71g91nv8133oa.png-j.jpg">
+<meta property="og:updated_time" content="2018-07-04T13:06:48.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="巧用一个小技巧实现自动打包完成后发邮件通知到相关人员">
 <meta name="twitter:description" content="问题背景：   最近在公司里利用 Jenkins 来实施自动化打包时，遇到一个问题就是：我在打包完成后要如何及时的通知到产品与测试等相关人员。 搁浅   原本是打算在自动化流程内写些脚本去调用邮件服务实现，但是在网上查找了几篇文章后，感觉过程都较为复杂，在实施过程中出现了一些问题没法及时有效的找到原因（PS:毕竟我没有专门去学习过 Shell、Python 等脚本语言)，同时目前自己工作也比较繁">
-<meta name="twitter:image" content="http://image.ijason.me/WX20180527-103652.png">
+<meta name="twitter:image" content="https://t1.aixinxi.net/o_1chi4caga1e3t1tn71g91nv8133oa.png-j.jpg">
 
 
 
@@ -302,7 +302,7 @@
 <p>   于是灵机一动：我们是不是可以利用这个通知邮件来做点什么呢？🤔 <a id="more"></a> </p>
 <p>   后来想起来邮箱里好像有一个叫“收信规则”的服务。嗯~ 对，就是它，我们完全可以利用它来办到呀。</p>
 <h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>   此时这个问题的解决方法就很明朗了，我们只需设置下收信规则就行了，(注：以下设置是在QQ邮箱内的设置步骤，其他邮箱还请自行探索哈) 具体设置步骤如下：</p>
-<p>   首先打开你的QQ邮箱-&gt;在页面左上角的有个”设置”点击进去，然后切换到”收信规则”选项卡-&gt;在页面右测有个“创建收信规则”按钮，点击进去你会看到以下的页面，接下来的具体设置见图<br><img src="http://image.ijason.me/WX20180527-103652.png" alt="20180527-103652"></p>
+<p>   首先打开你的QQ邮箱-&gt;在页面左上角的有个”设置”点击进去，然后切换到”收信规则”选项卡-&gt;在页面右测有个“创建收信规则”按钮，点击进去你会看到以下的页面，接下来的具体设置见图<br><img src="https://t1.aixinxi.net/o_1chi4caga1e3t1tn71g91nv8133oa.png-j.jpg" alt="20180527-103652"></p>
 <p>   这样设置完后，到时候发包平台的通知邮件一旦发送到你邮箱里 就会自动转发到你设置的那个邮箱里。至此整个问题得到解决</p>
 <h3 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h3><p>   这个方法目前还存在着几个问题：</p>
 <ol>
