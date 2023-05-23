@@ -1,344 +1,274 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-48x48-custom.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-48x48-custom.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ijason.me","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="git," />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="iJasonY's Blog" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
-<meta name="keywords" content="git">
+    <meta name="description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“&#x2F;”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 的 .gitignore 配置">
 <meta property="og:url" content="http://blog.ijason.me/p/98bf8440/index.html">
 <meta property="og:site_name" content="iJasonY&#39;s Blog">
-<meta property="og:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-13T09:40:39.709Z">
+<meta property="og:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“&#x2F;”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-30T17:08:14.000Z">
+<meta property="article:modified_time" content="2023-05-22T07:31:08.426Z">
+<meta property="article:author" content="iJasonY">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 的 .gitignore 配置">
-<meta name="twitter:description" content="如果你正在使用 git 做版本管理，想必对 .gitignore 文件并不会陌生 .gitignore 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。 配置语法： 以斜杠“/”开头表示目录； 以星号“*”通配多个字符； 以问号“?”通配单个字符； 以方括号“[]”包含单个字符的匹配列表； 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；  此外，git">
+
+
+<link rel="canonical" href="http://blog.ijason.me/p/98bf8440/">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Muse',
-    sidebar: {"position":"right","display":"hide"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: undefined,
-      author: '博主'
-    }
-  };
-</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://blog.ijason.me/p/98bf8440/","path":"p/98bf8440/","title":"git 的 .gitignore 配置"}</script>
 
-  <title> git 的 .gitignore 配置 | iJasonY's Blog </title>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>git 的 .gitignore 配置 | iJasonY's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="iJasonY's Blog" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-  
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?38c50d16a01b26734069c6e688d887c2";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">iJasonY's Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
   </div>
-  <p class="site-subtitle">繁花在時光中凋零，在記憶中盛開。</p>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">iJasonY's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">繁花在時光中凋零，在記憶中盛開。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
 </div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">配置语法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%84%E5%88%99%E7%A4%BA%E4%BE%8B%E4%B8%8E%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">规则示例与说明：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8C%83%E4%BE%8B%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">范例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E5%A2%9E%E5%8A%A0%E4%BA%86-gitignore%E6%96%87%E4%BB%B6%EF%BC%8C-%E4%BD%86%E6%98%AF%E9%87%8C%E9%9D%A2%E7%9A%84%E8%A7%84%E5%88%99%E5%8D%B4%E6%B2%A1%E6%9C%89%E7%94%9F%E6%95%88%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">为什么我增加了.gitignore文件， 但是里面的规则却没有生效？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%B8%AA%E6%A0%97%E5%AD%90%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">举个栗子：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore%E6%96%87%E4%BB%B6%E7%9A%84%E5%A6%99%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">.gitignore文件的妙用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="iJasonY"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">iJasonY</p>
+  <div class="site-description" itemprop="description">繁花在時光中凋零，在記憶中盛開。</div>
 </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/iJasonY" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;iJasonY" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/JaosnYan" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;JaosnYan" rel="noopener me" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+        </div>
+      </div>
+    </div>
 
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.ijason.me/p/98bf8440/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="iJasonY">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="iJasonY's Blog">
+      <meta itemprop="description" content="繁花在時光中凋零，在記憶中盛開。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="git 的 .gitignore 配置 | iJasonY's Blog">
+      <meta itemprop="description" content="">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git 的 .gitignore 配置
+        </h1>
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                git 的 .gitignore 配置
-              
-            
-          </h1>
-        
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-05-01T01:08:14+08:00" content="2018-05-01">
-              2018-05-01
-            </time>
-          </span>
+      <time title="创建时间：2018-05-01 01:08:14" itemprop="dateCreated datePublished" datetime="2018-05-01T01:08:14+08:00">2018-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-22 15:31:08" itemprop="dateModified" datetime="2023-05-22T15:31:08+08:00">2023-05-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9A%8F%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">随记</span></a>
+        </span>
+    </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随记/" itemprop="url" rel="index">
-                    <span itemprop="name">随记</span>
-                  </a>
-                </span>
+  
+</div>
 
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
         </div>
       </header>
+
     
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>如果你正在使用 git 做版本管理，想必对 <code>.gitignore</code> 文件并不会陌生 <code>.gitignore</code> 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。</p>
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>如果你正在使用 git 做版本管理，想必对 <code>.gitignore</code> 文件并不会陌生 <code>.gitignore</code> 配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利。</p>
 <h3 id="配置语法："><a href="#配置语法：" class="headerlink" title="配置语法："></a>配置语法：</h3><ul>
-<li>以斜杠“/”开头表示目录；</li>
+<li>以斜杠“&#x2F;”开头表示目录；</li>
 <li>以星号“*”通配多个字符；</li>
 <li>以问号“?”通配单个字符；</li>
 <li>以方括号“[]”包含单个字符的匹配列表；</li>
 <li>以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；</li>
 </ul>
-<p>此外，git 对于 <code>.gitignore</code> 配置文件是按行从上到下进行规则匹配的，这意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效。<br><a id="more"></a></p>
+<p>此外，git 对于 <code>.gitignore</code> 配置文件是按行从上到下进行规则匹配的，这意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效。</p>
+<span id="more"></span>
+
 <h3 id="规则示例与说明："><a href="#规则示例与说明：" class="headerlink" title="规则示例与说明："></a>规则示例与说明：</h3><ol>
 <li><p>规则：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd1/*</span><br></pre></td></tr></table></figure>
-<p> 说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 /fd1/ 目录，还是某个子目录 /child/fd1/ 目录，都会被忽略。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd1/*</span><br></pre></td></tr></table></figure>
+
+<p> 说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 &#x2F;fd1&#x2F; 目录，还是某个子目录 &#x2F;child&#x2F;fd1&#x2F; 目录，都会被忽略。</p>
 </li>
 <li><p>规则：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/fd1/*</span><br></pre></td></tr></table></figure>
-<p> 说明：忽略根目录下的 /fd1/ 目录的全部内容。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/fd1/*</span><br></pre></td></tr></table></figure>
+
+<p> 说明：忽略根目录下的 &#x2F;fd1&#x2F; 目录的全部内容。</p>
 </li>
 <li><p>规则：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    </span><br><span class="line">!.gitignore</span><br><span class="line">    </span><br><span class="line">!/fw/bin/</span><br><span class="line">    </span><br><span class="line">!/fw/sf/</span><br></pre></td></tr></table></figure>
-<p> 说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    </span><br><span class="line">!.gitignore</span><br><span class="line">    </span><br><span class="line">!/fw/bin/</span><br><span class="line">    </span><br><span class="line">!/fw/sf/</span><br></pre></td></tr></table></figure>
+
+<p> 说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 &#x2F;fw&#x2F;bin&#x2F; 和 &#x2F;fw&#x2F;sf&#x2F; 目录。</p>
 </li>
 </ol>
 <h3 id="范例："><a href="#范例：" class="headerlink" title="范例："></a>范例：</h3><ol>
-<li><p>忽略<em>.o和</em>.a文件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
+<li><p>忽略*.o和*.a文件</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.[oa]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>忽略<em>.b和</em>.B文件，my.b除外</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*.[bB]</span><br><span class="line"></span><br><span class="line">!my.b</span><br></pre></td></tr></table></figure>
+<li><p>忽略*.b和*.B文件，my.b除外</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*.[bB]</span><br><span class="line"></span><br><span class="line">!my.b</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>忽略dbg文件和dbg目录</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>只忽略dbg目录，不忽略dbg文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbg/</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="4">
-<li>只忽略dbg文件，不忽略dbg目录 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br><span class="line">!dbg/</span><br></pre></td></tr></table></figure>
+<li><p>只忽略dbg文件，不忽略dbg目录</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dbg</span><br><span class="line">!dbg/</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol start="5">
 <li><p>只忽略当前目录下的dbg文件和目录，子目录的dbg不在忽略范围内</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dbg</span><br></pre></td></tr></table></figure>
-</li>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/dbg</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="为什么我增加了-gitignore文件，-但是里面的规则却没有生效？"><a href="#为什么我增加了-gitignore文件，-但是里面的规则却没有生效？" class="headerlink" title="为什么我增加了.gitignore文件， 但是里面的规则却没有生效？"></a>为什么我增加了<code>.gitignore</code>文件， 但是里面的规则却没有生效？</h3><p>这是因为我们误解了<code>.gitignore</code>文件的用途，该文件只能作用于 <strong>Untracked Files</strong>，也就是那些从来没有被 git 记录过的文件（自添加以后，从未被 add 及 commit 过的文件）。</p>
 <p>之所以你的规则不生效，是因为那些文件曾经被 git 记录过，因此 <code>.gitignore</code> 对它们完全无效。</p>
@@ -352,319 +282,103 @@
 <p>  所以这时候你就需要做的就是：</p>
 <ol>
 <li><p>从 git 的数据库中删除对于该文件的追踪；</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached filePath (filePath 为文件路径)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>nodejs案例就是</span><br><span class="line">git rm --cached node_modules</span><br></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached filePath (filePath 为文件路径)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">nodejs案例就是</span></span><br><span class="line">git rm --cached node_modules</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>把对应的规则写入 <code>.gitignore</code>，让忽略真正生效；</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#nodejs案例就是在 .gitignore 文件里添加以下内容</span><br><span class="line"></span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#nodejs案例就是在 .gitignore 文件里添加以下内容</span><br><span class="line"></span><br><span class="line">node_modules/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 </li>
 <li><p>提交 ＋ 推送。</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>例如</span><br><span class="line">git commit -m 'delete remote some file'</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">例如</span></span><br><span class="line">git commit -m &#x27;delete remote some file&#x27;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="gitignore文件的妙用"><a href="#gitignore文件的妙用" class="headerlink" title=".gitignore文件的妙用"></a><code>.gitignore</code>文件的妙用</h3><p><code>.gitignore</code> 还有个有意思的小功能， 一个空的 <code>.gitignore</code> 文件可以被当作是一个 <code>placeholder</code> 。当你需要为项目创建一个空的 log 目录时， 这就变的很有用。</p>
 <p>例如你可以创建一个 log 目录 在里面放置一个空的 <code>.gitignore</code> 文件。这样当你 clone 这个 repo 的时候 git 会自动的创建好一个空的 log 目录了。（正常情况下 git 是不会推送一个空目录到 repo 的）</p>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
-<li><p><a href="https://git-scm.com/docs/git-rm/" target="_blank" rel="noopener">git-rm Documentation</a> </p>
+<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-rm/">git-rm Documentation</a> </p>
 </li>
-<li><p><a href="https://segmentfault.com/q/1010000000430426/" target="_blank" rel="noopener">git忽略已经被提交的文件</a></p>
+<li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000000430426/">git忽略已经被提交的文件</a></p>
 </li>
 </ul>
 
-      
     </div>
 
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
+    
+    
+    
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/p/c918e033/" rel="next" title="如何在Ubuntu 14.04下安装Node.js">
-                <i class="fa fa-chevron-left"></i> 如何在Ubuntu 14.04下安装Node.js
-              </a>
-            
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"># git</a>
           </div>
 
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/p/e030e36e/" rel="prev" title="巧用一个小技巧实现自动打包完成后发邮件通知到相关人员">
-                巧用一个小技巧实现自动打包完成后发邮件通知到相关人员 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
+        
 
-      
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/p/c918e033/" rel="prev" title="如何在Ubuntu 14.04下安装Node.js">
+                  <i class="fa fa-chevron-left"></i> 如何在Ubuntu 14.04下安装Node.js
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/p/e030e36e/" rel="next" title="巧用一个小技巧实现自动打包完成后发邮件通知到相关人员">
+                  巧用一个小技巧实现自动打包完成后发邮件通知到相关人员 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
+</div>
 
 
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
 
 
-          </div>
-          
 
+</div>
+  </main>
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="iJasonY" />
-          <p class="site-author-name" itemprop="name">iJasonY</p>
-          <p class="site-description motion-element" itemprop="description">繁花在時光中凋零，在記憶中盛開。</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">6</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/iJasonY" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/JaosnYan" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置语法："><span class="nav-number">1.</span> <span class="nav-text">配置语法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#规则示例与说明："><span class="nav-number">2.</span> <span class="nav-text">规则示例与说明：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#范例："><span class="nav-number">3.</span> <span class="nav-text">范例：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么我增加了-gitignore文件，-但是里面的规则却没有生效？"><span class="nav-number">4.</span> <span class="nav-text">为什么我增加了.gitignore文件， 但是里面的规则却没有生效？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举个栗子："><span class="nav-number">5.</span> <span class="nav-text">举个栗子：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitignore文件的妙用"><span class="nav-number">6.</span> <span class="nav-text">.gitignore文件的妙用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2015 - 
-  <span itemprop="copyrightYear">2018</span>
+  <footer class="footer">
+    <div class="footer-inner">
+<div class="copyright">
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">iJasonY</span>
 </div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>  
-</div>
-
-<div class="powered-by">
-</div>
-<div class="theme-info">
-  <a class="theme-link" href="http://www.miibeian.gov.cn">闽ICP备15005530-2</a>
-</div>
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">闽ICP备 15005530号-2 </a>
   </div>
 
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
+    </div>
+  </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
   
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -672,17 +386,7 @@
 
 
 
-  
 
 
-
-  
-  
-  
-
-  
-
-  
-
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":75,"height":150,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"name":{"canvas":"koharucanvas","div":"koharu-widge"},"log":false});</script></body>
+<script src="/live2d/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2d/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2d/assets/hijiki.model.json"},"display":{"width":150,"height":300,"position":"left"},"mobile":{"show":true,"scale":0.5},"react":{"opacity":0.7},"name":{"canvas":"koharucanvas","div":"koharu-widge"},"log":false});</script></body>
 </html>
