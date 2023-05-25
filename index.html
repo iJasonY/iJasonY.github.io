@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ijason.me","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ijason.me","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="繁花在時光中凋零，在記憶中盛開。">
 <meta property="og:type" content="website">
@@ -292,7 +292,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-22 15:31:08" itemprop="dateModified" datetime="2023-05-22T15:31:08+08:00">2023-05-22</time>
+      <time title="修改时间：2023-05-25 11:24:15" itemprop="dateModified" datetime="2023-05-25T11:24:15+08:00">2023-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -392,7 +392,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-22 15:31:08" itemprop="dateModified" datetime="2023-05-22T15:31:08+08:00">2023-05-22</time>
+      <time title="修改时间：2023-05-25 11:21:19" itemprop="dateModified" datetime="2023-05-25T11:21:19+08:00">2023-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -682,7 +682,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-22 15:31:08" itemprop="dateModified" datetime="2023-05-22T15:31:08+08:00">2023-05-22</time>
+      <time title="修改时间：2023-05-25 11:29:35" itemprop="dateModified" datetime="2023-05-25T11:29:35+08:00">2023-05-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -705,7 +705,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>今天和往常一样打开一个包含<a target="_blank" rel="noopener" href="https://cocoapods.org/">CocoaPods</a>类库的项目  </p>
-<h4 id="命令行执行"><a href="#命令行执行" class="headerlink" title="命令行执行"></a>命令行执行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pod install --verbose --no-repo-update</span><br><span class="line">[!] The &#x27;master&#x27; repo requires CocoaPods 0.39.0 - </span><br></pre></td></tr></table></figure>
+<h4 id="命令行执行"><a href="#命令行执行" class="headerlink" title="命令行执行"></a>命令行执行</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pod <span class="token function">install</span> <span class="token parameter variable">--verbose</span> --no-repo-update
+
+<span class="token punctuation">[</span><span class="token operator">!</span><span class="token punctuation">]</span> The <span class="token string">'master'</span> repo requires CocoaPods <span class="token number">0.39</span>.0 - <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>what，失败了~~😱，查看原因提示需要CocoaPods 0.39.0版本，于是乎查看了下机器上安装的CocoaPods版本。</p>
           <!--noindex-->
             <div class="post-button">
@@ -765,6 +767,7 @@
     <i class="fa fa-arrow-up fa-lg"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
