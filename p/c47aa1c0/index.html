@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ijason.me","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="简单的概念 明文：加密前的信息 密文：加密后的信息 加密算法：加密或解密的算法 密钥：算法使用的钥匙  简单的例子eg: 将123456每位数字都加1后得到234567">
+    <meta name="description" content="简单的概念 明文：加密前的信息 密文：加密后的信息 加密算法：加密或解密的算法 密钥：算法使用的钥匙  举个简单的例子🌰   eg: 将123456每位数字都加1后得到234567">
 <meta property="og:type" content="article">
 <meta property="og:title" content="加密算法简介">
 <meta property="og:url" content="http://blog.ijason.me/p/c47aa1c0/index.html">
 <meta property="og:site_name" content="iJasonY&#39;s Blog">
-<meta property="og:description" content="简单的概念 明文：加密前的信息 密文：加密后的信息 加密算法：加密或解密的算法 密钥：算法使用的钥匙  简单的例子eg: 将123456每位数字都加1后得到234567">
+<meta property="og:description" content="简单的概念 明文：加密前的信息 密文：加密后的信息 加密算法：加密或解密的算法 密钥：算法使用的钥匙  举个简单的例子🌰   eg: 将123456每位数字都加1后得到234567">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-07-14T11:55:55.000Z">
-<meta property="article:modified_time" content="2023-05-22T07:31:08.427Z">
+<meta property="article:modified_time" content="2023-05-30T05:53:24.376Z">
 <meta property="article:author" content="iJasonY">
 <meta property="article:tag" content="密码技术">
 <meta name="twitter:card" content="summary">
@@ -108,7 +108,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">简单的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">2.</span> <span class="nav-text">简单的例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%A7%8D%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">加密算法种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%B8%BE%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">算法举例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">补充：</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">简单的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BE%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BE%8B%E5%AD%90%F0%9F%8C%B0"><span class="nav-number">2.</span> <span class="nav-text">举个简单的例子🌰</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%A7%8D%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">加密算法种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E4%B8%BE%E4%BE%8B"><span class="nav-number">4.</span> <span class="nav-text">算法举例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">补充：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,7 +203,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-05-22 15:31:08" itemprop="dateModified" datetime="2023-05-22T15:31:08+08:00">2023-05-22</time>
+      <time title="修改时间：2023-05-30 13:53:24" itemprop="dateModified" datetime="2023-05-30T13:53:24+08:00">2023-05-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,12 +230,7 @@
 <li>加密算法：加密或解密的算法</li>
 <li>密钥：算法使用的钥匙</li>
 </ul>
-<h4 id="简单的例子"><a href="#简单的例子" class="headerlink" title="简单的例子"></a>简单的例子</h4><pre><code>eg: 将123456每位数字都加1后得到234567 
-
-
-   
-  
-</code></pre>
+<h4 id="举个简单的例子🌰"><a href="#举个简单的例子🌰" class="headerlink" title="举个简单的例子🌰"></a>举个简单的例子🌰</h4><p>   eg: 将123456每位数字都加1后得到234567 </p>
  <span id="more"></span>    
 <p>  在这个例子中：</p>
 <ul>
@@ -250,8 +245,8 @@
 </ul>
 <h4 id="加密算法种类"><a href="#加密算法种类" class="headerlink" title="加密算法种类"></a>加密算法种类</h4><p>  按照加密的方式我们可以将加密算法大体分成一下三种：</p>
 <ul>
-<li>对称加密算法（加密和解密算法是对称的可能有点抽象你可以理解成同一把钥匙）</li>
-<li>非对称加密算法（加密和解密算法是非对称的可以理解成加密的时候是一把钥匙解密的时候是一把钥匙，典型的就是rsa公钥和私钥）</li>
+<li>对称加密算法（加密和解密算法是对称的，你可以理解成加密解密用的是同一把钥匙）</li>
+<li>非对称加密算法（加密和解密算法是非对称的，这个可能有点抽象，你可以理解成加密的时候是一把钥匙，而解密时用的是另一把钥匙，典型的就是rsa公钥和私钥）</li>
 <li>经典哈希算法（哈希算法是一种散列算法，有个特殊性是它是不可逆只能通过穷举法超大量的计算才可能算出，一般几率很小，还有就是你同一段的明文两次加密出来的结果是不一样的）</li>
 </ul>
 <h4 id="算法举例"><a href="#算法举例" class="headerlink" title="算法举例"></a>算法举例</h4><ul>
@@ -259,10 +254,10 @@
 <li>非对称加密算法：RSA、Elgamal、背包算法、Rabin、D-H、ECC。</li>
 <li>经典的哈希算法：MD2、MD4、MD5 和 SHA-1（目的是将任意长输入通过算法变为固定长输出，且保证输入变化一点输出都不同，且不能反向解密）</li>
 </ul>
-<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>  非对称加密算法可能是世界上最重要的算法，它是当今电子商务等领域的基石。</p>
-<p>  简而言之，非对称加密就是指加密公钥和解密密钥是不同的，而且加密公钥和解密密钥是成对出现。非对称加密又叫公钥加密，也就是说成对的密钥，其中一个是对外公开的，所有人都可以获得，人们称之为公钥；而与之相对应的称之为私钥，只有这对密钥的生成者才能拥有。</p>
-<p>  对于一个私钥，有且只有一个与之对应的公钥。公钥公开给任何人，私钥通常是只有生成者拥有。公&#x2F;私钥通常是1024位或者2048位，越长安全系数越高，但是解密越困难。尽管拿到了公钥，如果没有私钥，要想解密那几乎是不可能的，至少现在在世界上还没有人公开出来说成功解密的。</p>
-<p>  关于公钥和私钥总结一句话：公钥和密钥成对出现，其中公钥负责加密 ，私钥负责解密
+<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h4><p>   非对称加密算法可能是世界上最重要的算法，它是当今电子商务等领域的基石。</p>
+<p>   简而言之，非对称加密就是指加密公钥和解密密钥是不同的，而且加密公钥和解密密钥是成对出现。非对称加密又叫公钥加密，也就是说成对的密钥，其中一个是对外公开的，所有人都可以获得，人们称之为公钥；而与之相对应的称之为私钥，只有这对密钥的生成者才能拥有。</p>
+<p>   对于一个私钥，有且只有一个与之对应的公钥。公钥公开给任何人，私钥通常是只有生成者拥有。公&#x2F;私钥通常是1024位或者2048位，越长安全系数越高，但是解密越困难。尽管拿到了公钥，如果没有私钥，要想解密那几乎是不可能的（PS：至少现在在世界上还没有人公开出来说成功解密的）。</p>
+<p>最后：<em>关于公钥和私钥总结一句话：公钥和密钥是成对出现的，其中公钥负责加密，而私钥负责解密。</em>
   </p>
 
     </div>
