@@ -2011,6 +2011,15 @@ input[type=checkbox] {
   margin-left: 0;
   margin-right: 0;
 }
+span.blur {
+  text-shadow: 0 0 0.5em var(--text-color);
+  color: rgba(1,1,1,0.1) !important;
+  transition: 0.2s;
+}
+span.blur:hover {
+  text-shadow: 0 0 0;
+  color: var(--text-color) !important;
+}
 .tagcloud {
   padding: 1rem 5%;
 }
